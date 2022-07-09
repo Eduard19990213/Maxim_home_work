@@ -152,18 +152,18 @@ number_2 = str(number)
 
 # for
 
-# for i in range(1, 121, 4):
-#     print(f'Число 2 в степени {i} равно {2**i}')
+for i in range(1, 121, 4):
+    print(f'Число 2 в степени {i} равно {2**i}')
 
-name = 'Pavel'
-
-list_name = ['Lloyd', 'Ilon', 'Ferdinand', 'Askold', 'Erast', 'Maxim']
-
-for name_in_list in list_name:
-    if name_in_list == name:
-        print(name)
-        break
-    else:
-        continue
-else:
-    print(f'Имени {name} в {list_name} нет')
+# name = 'Pavel'
+#
+# list_name = ['Lloyd', 'Ilon', 'Ferdinand', 'Askold', 'Erast', 'Maxim']
+#
+# for name_in_list in list_name:
+#     if name_in_list == name:
+#         print(name)
+#         break
+#     else:
+#         continue
+# else:
+#     print(f'Имени {name} в {list_name} нет')
