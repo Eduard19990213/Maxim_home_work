@@ -29,4 +29,8 @@
 # Как гений чистой красоты.
 # ''')
 
-print(f'В одном Мегабайте {4**5} Килобайт')
+# print(f'В одном Мегабайте {4**5} Килобайт')
+
+for number in range(13):
+    result = number**(number/(number + 1))
+print(number)
