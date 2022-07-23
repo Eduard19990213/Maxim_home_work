@@ -101,9 +101,9 @@ number_2 = str(number)
 #
 # # Словари
 #
-# dictionary_1 = dict()
-# dictionary_2 = {'first_key': 45, 'я передумал': 'Непостоянство'}
-# print(dictionary_2['first_key'])
+dictionary_1 = dict()
+dictionary_2 = {'first_key': 45, 'я передумал': 'Непостоянство'}
+print(dictionary_2['first_key'])
 # # Добавить новую пару ключ-значение
 # print(dictionary_2)
 # dictionary_2['third_key'] = 4569
@@ -152,8 +152,8 @@ number_2 = str(number)
 
 # for
 
-for i in range(1, 121, 4):
-    print(f'Число 2 в степени {i} равно {2**i}')
+#for i in range(1, 121, 4):
+#    print(f'Число 2 в степени {i} равно {2**i}')
 
 # name = 'Pavel'
 #

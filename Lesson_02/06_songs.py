@@ -14,6 +14,8 @@ violator_songs = [
     ['Blue Dress', 4.29],
     ['Clean', 5.83],
 ]
+x = violator_songs[3] + violator_songs[5] + violator_songs[8]
+print(f'Три песни звучат {round(x[1] + x[3] + x[5], 2)} минут')
 
 # Распечатайте общее время звучания трех песен: 'Halo', 'Enjoy the Silence' и 'Clean' в формате
 #   Три песни звучат ХХХ.XX минут
@@ -37,7 +39,8 @@ pocket_universe_songs = {
     'Beyond Mirrors': 5.82,
 }
 
+print(pocket_universe_songs['On Track'] + pocket_universe_songs['To the Sea'] + pocket_universe_songs['Beyond Mirrors'])
 # Распечатайте общее время звучания трех песен: 'On Track', 'To the Sea' и 'Beyond Mirrors'
-#   А другие три песни звучат приблизительно ХХХ минут
+
 
 # Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
