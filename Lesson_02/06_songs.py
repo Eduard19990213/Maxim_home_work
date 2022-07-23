@@ -43,4 +43,4 @@ print(pocket_universe_songs['On Track'] + pocket_universe_songs['To the Sea'] + 
 # Распечатайте общее время звучания трех песен: 'On Track', 'To the Sea' и 'Beyond Mirrors'
 
 
-# Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
+# Лучше заранее вычислить необходимое, а  затем в print(xxx, yyy, zzz)
