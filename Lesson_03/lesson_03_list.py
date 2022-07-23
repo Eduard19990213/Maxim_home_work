@@ -11,7 +11,7 @@ extended_list.insert(5, element_to_insert)
 # print(extended_list)
 
 # удаление первого элемента, имеющего указанное значение
-list_to_destract = ['life, my life ', '45', 45, 'zusamen', 'extended man']
+list_to_destract = ['life, my life ', '45', 45, 'zusammen', 'extended man']
 list_to_destract.remove(45)
 # print(list_to_destract)
 
