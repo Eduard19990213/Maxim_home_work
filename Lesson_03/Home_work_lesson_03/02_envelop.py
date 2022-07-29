@@ -10,15 +10,30 @@
 # Результат проверки вывести на консоль (ДА/НЕТ)
 # Использовать только операторы if/elif/else, можно вложенные
 
+
+
 envelop_x, envelop_y = 10, 7
-paper_x, paper_y = 10, 1
-# проверить для
-# paper_x, paper_y = 9, 8
-# paper_x, paper_y = 6, 8
+#paper_x, paper_y = 10, 1
+#paper_x, paper_y = 6, 8
 # paper_x, paper_y = 8, 6
 # paper_x, paper_y = 3, 4
 # paper_x, paper_y = 11, 9
 # paper_x, paper_y = 9, 11
+#paper_x, paper_y = 9, 8
+if envelop_x == paper_x and envelop_y == paper_y or envelop_x == paper_y and envelop_y == paper_x:
+    print('Да, лист входит в конверт впритирку')
+elif envelop_x > paper_x and envelop_y > paper_y or envelop_x > paper_y and envelop_y > paper_x:
+    print('Да, лист помещается в конверт')
+elif envelop_x >= paper_x and envelop_y >= paper_y or envelop_x >= paper_y and envelop_y >= paper_x:
+    print('Да, лист помещается в конверт')
+elif envelop_x < paper_x and envelop_x < paper_y:
+    print('Нет, лист слишком широкий')
+elif envelop_y < paper_x and envelop_y < paper_y:
+    print('Нет, лист слишком длинный')
+else:
+    print('Нет, лист не вмещается в конверт')
+
+
 # (просто раскоментировать нужную строку и проверить свой код)
 
 
@@ -28,9 +43,9 @@ paper_x, paper_y = 10, 1
 #
 # Определить, пройдет ли кирпич через отверстие (грани кирпича параллельны сторонам отверстия)
 
-hole_x, hole_y = 8, 9
+#hole_x, hole_y = 8, 9
 # brick_x, brick_y, brick_z = 11, 10, 2
-brick_x, brick_y, brick_z = 11, 2, 10
+#brick_x, brick_y, brick_z = 11, 2, 10
 # brick_x, brick_y, brick_z = 10, 11, 2
 # brick_x, brick_y, brick_z = 10, 2, 11
 # brick_x, brick_y, brick_z = 2, 10, 11
