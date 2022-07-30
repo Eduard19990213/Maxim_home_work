@@ -7,14 +7,20 @@
 # Если номер месяца некорректен - сообщить об этом
 
 # Номер месяца получать от пользователя следующим образом
+in_month_28_days = [2]
+in_month_30_days = [4, 6, 9, 11]
+in_month_31_days = [1, 3, 5, 7, 8, 10, 12]
+while True:
+    print('Для выхода введите -13')
+    user_input = int(input('Введите, пожалуйста, номер месяца: '))
+    if user_input == -13:
+        break
+    if user_input in in_month_31_days:
+        print(f'В {user_input}-ом месяце 31 день')
+    elif user_input in in_month_30_days:
+        print(f'В {user_input}-ом месяце 30 дней')
+    elif user_input in in_month_28_days:
+        print(f'Во {user_input}-ом месяце 28 дней')
+    else:
+        print(f'В {user_input}-ом месяце пока что, к сожалению, ноль дней')
 
-user_input = int(input('Введите, пожалуйста, номер месяца: '))
-if user_input == 1 or user_input == 3 or user_input == 5 or user_input == 7 or user_input == 8 or user_input == 10 or user_input == 12:
-    print(f'В {user_input}-ом месяце 31 день')
-elif user_input == 4 or user_input == 6 or user_input == 9 or user_input == 11:
-    print(f'В {user_input}-ом месяце 30 дней')
-elif user_input > 12 or user_input == 0 or user_input <= 0:
-    print(f'В {user_input}-ом месяце пока что, к сожалению, ноль дней')
-else:
-    print(f'Во {user_input}-ом месяце 28 дней')
-print('Для выхода введите -13')
