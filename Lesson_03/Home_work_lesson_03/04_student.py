@@ -12,4 +12,13 @@
 educational_grant, expenses = 10000, 12000
 months = 10
 percents = 3
+x = 0
+x2 = 0
+for months in range(10):
+    expenses += expenses * 0.03
+    if expenses > educational_grant:
+        x = expenses - educational_grant
+        print(f'В {months + 1 } месяц родители должны дать студенту ещё {round(x,2)} рублей помимо стипендии')
+        x2 += expenses - educational_grant
+print(f'В общей сложности за 10 месяцев проживания родители должны дать студенту {round(x2,2)} рублей')
 
