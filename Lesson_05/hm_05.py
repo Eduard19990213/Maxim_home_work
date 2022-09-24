@@ -9,27 +9,31 @@ sd.background_color = (255, 255, 255)
 sd.resolution = (1200, 900)
 sd.caption = 'Моё рабочее пространство'
 first_point = sd.get_point(500, 500)
-n = int(input())
-x = (180*(n-2)/n - 90)*2
+n = int(input('Введите число сторон в правильном многоугольнике: '))
+x = 180*(1 - (n-2)/n)
 #second_point = sd.get_point(500, 700)
 # v1 = sd.get_vector(start_point=first_point, angle=0, length=150, width=5, )
 # v1.draw()
 # v2 = sd.get_vector(second_point, 90, 200, 10)
 # v2.draw()
 
-def Mnogougolnik(start_point, length= 100, angle= 0):
+def mnogougolnik(start_point, length=100, angle=0):
     for number in range(n):
-        vector = sd.get_vector(start_point=start_point, width=10, length=length, angle=angle + x * number)
-        vector.draw()
+        vector = sd.get_vector(start_point=start_point, width=2, length=length, angle=angle + x * number)
+        vector.draw(color=sd.COLOR_BLACK)
         start_point = vector.end_point
 
-Mnogougolnik(start_point=first_point)
+mnogougolnik(start_point=first_point)
 
 
 
 def grid(resolution=sd.resolution, step=50):
     x = resolution[0]
     y = resolution[1]
+    x_os = sd.line(start_point=sd.get_point(0, y/2), end_point=sd.get_point(x, y/2), color=sd.COLOR_BLACK,
+                     width=4)
+    y_os = sd.line(start_point=sd.get_point(x/2, 0), end_point=sd.get_point(x/2, y), color=sd.COLOR_BLACK,
+                   width=4)
     x_grid = step
     y_grid = step
     while x_grid < x:
