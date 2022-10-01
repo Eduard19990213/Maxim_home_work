@@ -6,8 +6,8 @@ sd.background_color = (128, 25, 146)
 sd.resolution = (1600, 900)
 my_draw = DC(resolution=sd.resolution, number_of_angles=10, color=sd.COLOR_GREEN, width=2, length=60, angle=60,
              first_point=sd.get_point(200, 200), step_for_grid=50)
-# my_draw.n_ugolnik()
-my_draw.snow_fall()
+my_draw.n_ugolnik()
+# my_draw.snow_fall()
 sd.pause()
 
 # Изменить функцию сетки с отрисовкой штрихов единиц измерения

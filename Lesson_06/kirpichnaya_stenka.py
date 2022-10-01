@@ -4,6 +4,7 @@ width = 100
 height = 50
 y = 0
 y1 = height
+sd.resolution = (1600, 900)
 for i in range(12):
     start_point = sd.get_point(0, y)
     end_point = sd.get_point(600, y)

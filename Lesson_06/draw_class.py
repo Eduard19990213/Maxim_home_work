@@ -28,11 +28,17 @@ class DrawClass:
             xl = sd.line(start_point=sd.get_point(x_grid, 0), end_point=sd.get_point(x_grid, y), color=sd.COLOR_BLACK,
                          width=1)
             x_grid += self.step_for_grid
+            xl2 = sd.line(start_point=sd.get_point(x_grid - self.step_for_grid, y / 2 + 0.3 * self.step_for_grid),
+                          end_point=sd.get_point(x_grid - self.step_for_grid, y / 2 - 0.3 * self.step_for_grid),
+                          color=sd.COLOR_BLACK, width=4)
 
         while y_grid < y:
             yl = sd.line(start_point=sd.get_point(0, y_grid), end_point=sd.get_point(x, y_grid), color=sd.COLOR_BLACK,
                          width=1)
             y_grid += self.step_for_grid
+            yl2 = sd.line(start_point=sd.get_point(x / 2 + 0.3 * self.step_for_grid, y_grid - self.step_for_grid),
+                          end_point=sd.get_point(x / 2 - 0.3 * self.step_for_grid, y_grid - self.step_for_grid),
+                          color=sd.COLOR_BLACK, width=4)
 
     def n_ugolnik(self):
         self.grid()
@@ -66,7 +72,6 @@ class DrawClass:
             if sd.user_want_exit():
                 break
         sd.pause()
-
 
 # sd.background_color = (128, 25, 146)
 # sd.resolution = (1600, 900)
