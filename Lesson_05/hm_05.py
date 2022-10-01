@@ -8,7 +8,7 @@ import simple_draw as sd
 sd.background_color = (255, 255, 255)
 sd.resolution = (1200, 900)
 sd.caption = 'Моё рабочее пространство'
-first_point = sd.get_point(500, 500)
+first_point = sd.get_point(800, 500)
 n = int(input('Введите число сторон в правильном многоугольнике: '))
 x = 180*(1 - (n-2)/n)
 #second_point = sd.get_point(500, 700)
@@ -19,7 +19,7 @@ x = 180*(1 - (n-2)/n)
 
 def mnogougolnik(start_point, length=100, angle=0):
     for number in range(n):
-        vector = sd.get_vector(start_point=start_point, width=2, length=length, angle=angle + x * number)
+        vector = sd.get_vector(start_point=start_point, width=3, length=length, angle=angle + x * number)
         vector.draw(color=sd.COLOR_BLACK)
         start_point = vector.end_point
 
@@ -41,10 +41,22 @@ def grid(resolution=sd.resolution, step=50):
                      width=1)
         x_grid += step
 
+        xl2 = sd.line(start_point=sd.get_point(x_grid-50,465), end_point=sd.get_point(x_grid-50,435),
+                      color=sd.COLOR_BLACK, width=4)
+
+
+
+
+
     while y_grid < y:
         yl = sd.line(start_point=sd.get_point(0, y_grid), end_point=sd.get_point(x, y_grid), color=sd.COLOR_BLACK,
                      width=1)
         y_grid += step
+        xl2 = sd.line(start_point=sd.get_point(585, y_grid), end_point=sd.get_point(615, y_grid),
+                      color=sd.COLOR_BLACK, width=4)
+
+
+
 
 grid()
 
